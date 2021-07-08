@@ -43,6 +43,10 @@
                 let txt = data[i].form;
                 txt = txt.replace(/\“/gi, "");
                 txt = txt.replace(/\”/gi, "");
+                txt = txt.replace(/\‘/gi, "");
+                txt = txt.replace(/\’/gi, "");
+                txt = txt.replace(/\"/gi, "");
+                txt = txt.replace(/\'/gi, "");
                 console.log(txt);
                 content = `${content} <p>${txt}</p>`;
             };
