@@ -42,12 +42,6 @@
             for(i = 0; i < data.length; i++){
                 let txt = data[i].form;
                 const del = /[\“\”\‘\’\"\']/gi;
-                // txt = txt.replace(/\“/gi, "");
-                // txt = txt.replace(/\”/gi, "");
-                // txt = txt.replace(/\‘/gi, "");
-                // txt = txt.replace(/\’/gi, "");
-                // txt = txt.replace(/\"/gi, "");
-                // txt = txt.replace(/\'/gi, "");
                 txt = txt.replace(del, "");
                 content = `${content} <p>${txt}</p>`;
             };
