@@ -41,13 +41,14 @@
             var content = '';
             for(i = 0; i < data.length; i++){
                 let txt = data[i].form;
-                txt = txt.replace(/\“/gi, "");
-                txt = txt.replace(/\”/gi, "");
-                txt = txt.replace(/\‘/gi, "");
-                txt = txt.replace(/\’/gi, "");
-                txt = txt.replace(/\"/gi, "");
-                txt = txt.replace(/\'/gi, "");
-                console.log(txt);
+                const del = /[\“\”\‘\’\"\']/gi;
+                // txt = txt.replace(/\“/gi, "");
+                // txt = txt.replace(/\”/gi, "");
+                // txt = txt.replace(/\‘/gi, "");
+                // txt = txt.replace(/\’/gi, "");
+                // txt = txt.replace(/\"/gi, "");
+                // txt = txt.replace(/\'/gi, "");
+                txt = txt.replace(del, "");
                 content = `${content} <p>${txt}</p>`;
             };
             document.getElementById('content').innerHTML = content;
