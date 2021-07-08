@@ -40,10 +40,12 @@
             const data = (new Function("return [" + v+ "];")());
             var content = '';
             for(i = 0; i < data.length; i++){
-                const txt = data[i].form;
+                let txt = data[i].form;
+                txt = txt.replace(/\“/gi, "");
+                txt = txt.replace(/\”/gi, "");
+                console.log(txt);
                 content = `${content} <p>${txt}</p>`;
             };
-
             document.getElementById('content').innerHTML = content;
         };
     </script>
